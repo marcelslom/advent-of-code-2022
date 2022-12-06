@@ -16,7 +16,7 @@
             };
         }
 
-        public int Part1()
+        public string Part1()
         {
             var sum = 0;
             foreach (var line in fileContent)
@@ -24,7 +24,7 @@
                 var common = CommonItem(line);
                 sum += ItemPriority(common);
             }
-            return sum;
+            return sum.ToString();
         }
 
         private static char CommonItem(string rucksackContent)
@@ -39,7 +39,7 @@
             return item is >= 'a' and <= 'z' ? item - 'a' + 1 : item - 'A' + 27;
         }
 
-        public int Part2()
+        public string Part2()
         {
             var sum = 0;
             for (var i = 0; i < fileContent.Length; i += 3)
@@ -47,7 +47,7 @@
                 var badge = fileContent[i].ToCharArray().Intersect(fileContent[i + 1].ToCharArray()).Intersect(fileContent[i + 2].ToCharArray()).Single();
                 sum += ItemPriority(badge);
             }
-            return sum;
+            return sum.ToString();
         }
     }
 }

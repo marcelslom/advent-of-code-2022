@@ -73,7 +73,7 @@
 
         private enum Outcome { Lost, Draw, Won }
 
-        public int Part1()
+        public string Part1()
         {
             var total = 0;
             foreach (var line in fileContent)
@@ -84,7 +84,7 @@
                 var outcome = GetOutcome(opponentMove, myMove);
                 total += ShapeScore(myMove) + OutcomeScore(outcome);
             }
-            return total;
+            return total.ToString();
         }
 
         private static int ShapeScore(Shape shape)
@@ -148,7 +148,7 @@
             };
         }
 
-        public int Part2()
+        public string Part2()
         {
             var total = 0;
             foreach (var line in fileContent)
@@ -159,7 +159,7 @@
                 var myMove = GetMyShape(opponentMove, end);
                 total += ShapeScore(myMove) + OutcomeScore(end);
             }
-            return total;
+            return total.ToString();
         }
 
         private static Outcome HowShouldRoundEnd(string end)

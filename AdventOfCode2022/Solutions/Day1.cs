@@ -16,7 +16,7 @@
             };
         }
 
-        public int Part2()
+        public string Part2()
         {
             var elfCalories = new List<int>();
             var elfMax = 0;
@@ -38,10 +38,10 @@
                 }
             }
             var sorted = elfCalories.OrderByDescending(x => x);
-            return sorted.ElementAt(0) + sorted.ElementAt(1) + sorted.ElementAt(2);
+            return (sorted.ElementAt(0) + sorted.ElementAt(1) + sorted.ElementAt(2)).ToString();
         }
 
-        public int Part1()
+        public string Part1()
         {
             var globalMax = 0;
             var currentElfMax = 0;
@@ -62,7 +62,7 @@
                     }
                 }
             }
-            return globalMax;
+            return globalMax.ToString();
         }
 
         private void CheckMax(int currentElfMax, ref int globalMax)

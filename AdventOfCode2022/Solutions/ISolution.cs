@@ -9,7 +9,7 @@ namespace AdventOfCode2022.Solutions
     internal interface ISolution
     {
         int DayNumber { get; }
-        int Part1();
-        int Part2();
+        string Part1();
+        string Part2();
     }
 }

@@ -16,9 +16,9 @@
             };
         }
 
-        public int Part1()
+        public string Part1()
         {
-            return fileContent.Where(ElvesSectionsFullyOverlaps).Count();
+            return fileContent.Where(ElvesSectionsFullyOverlaps).Count().ToString();
         }
 
         private static bool ElvesSectionsFullyOverlaps(string sectionsInfo)
@@ -50,9 +50,9 @@
             return firstSectionIndexes[0] >= secondSectionIndexes[0] && firstSectionIndexes[0] <= secondSectionIndexes[1];
         }
 
-        public int Part2()
+        public string Part2()
         {
-            return fileContent.Where(x => ElvesSectionsOverlaps(x, OverlapsAtAll)).Count();
+            return fileContent.Where(x => ElvesSectionsOverlaps(x, OverlapsAtAll)).Count().ToString();
         }
     }
 }
