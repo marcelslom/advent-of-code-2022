@@ -6,7 +6,8 @@ namespace AdventOfCode2022
     {
         static void Main(string[] args)
         {
-            var solution = Day6.Init(@"Input/day6.txt");
+            //var solution = Day7.Init(@"test.txt");
+            var solution = Day7.Init(@"Input/day7.txt");
             PrintSolution(solution);
         }
 
