@@ -2,7 +2,7 @@
 
 namespace AdventOfCode2022.Solutions
 {
-    internal class Day14 : ISolution
+    public class Day14 : ISolution
     {
         public int DayNumber => 14;
 
